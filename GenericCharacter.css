@@ -1,0 +1,146 @@
+.genericCharacter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "char-name char-name char-name"
+    "header header header"
+    "abilities skills psionic"
+    "saves skills combat"
+    "foci foci foci"
+    "cyber cyber cyber"
+    "psionic_abilities psionic_abilities psionic_abilities"
+    "weapons weapons weapons";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 450px) {
+  .genericCharacter{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "char-name"
+      "header"
+      "abilities"
+      "saves"
+      "psionic"
+      "combat"
+      "skills"
+      "foci"
+      "cyber"
+      "psionic_abilities"
+      "weapons";
+  }
+}
+
+.genericCharacter>div {
+  background-color: #ecf0f5;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.genericCharacter h4,
+.genericCharacter h3 {
+  color: #636b6f !important; /*Themes use important so it is needed to override the theme*/
+}
+
+.genericCharacter div,
+.genericCharacter li{
+  color: #636b6f;
+}
+
+.genericCharacter h4, h3 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.genericCharacter ul {
+  display: list-item;
+  list-style: none;
+  padding-left: 0;
+  margin: 0px;
+}
+
+.genericCharacter .char-name {
+  grid-area: char-name;
+}
+
+.genericCharacter .header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "class bg player"
+    "race homeworld skill_points";
+  grid-column-gap: 10px;
+}
+
+.genericCharacter .abilities {
+  grid-area: abilities;
+  /* Is making this list a grid really necessary? */
+  /*display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);*/
+}
+
+.genericCharacter .skills {
+  grid-area: skills;
+}
+
+.genericCharacter .psionic {
+  grid-area: psionic;
+}
+
+.genericCharacter .combat{
+  grid-area: combat;
+}
+
+.genericCharacter .combat{
+  grid-area: combat;
+}
+
+.genericCharacter .saves {
+  grid-area: saves;
+}
+
+
+.genericCharacter .weapons{
+  grid-area: weapons;
+}
+
+.genericCharacter .foci{
+  grid-area: foci;
+}
+
+.genericCharacter .cyber{
+  grid-area: cyber;
+}
+
+.genericCharacter .psionic_abilities{
+  grid-area: psionic_abilities;
+}
+
+.genericCharacter .class {
+  grid-area: class;
+}
+
+.genericCharacter .background {
+  grid-area: bg;
+}
+
+.genericCharacter .player {
+  grid-area: player;
+}
+
+.genericCharacter .race {
+  grid-area: race;
+}
+
+.genericCharacter .homeworld{
+  grid-area: homeworld;
+}
+
+.genericCharacter .skill_points {
+  grid-area: skill_points;
+}

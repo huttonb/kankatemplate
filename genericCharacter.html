@@ -1,0 +1,241 @@
+<head>
+    <link rel="stylesheet" href="GenericCharacter.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="genericCharacter">
+
+    <div class="char-name">
+        <h3><span class="attribute-preview">{{ $Character_Name }}</span></h3>
+    </div>
+
+    <div class="header">
+        <div class="class">
+            Class &amp; Level: <span class="attribute-preview">{{ $Class }}</span> <span
+                class="attribute-preview">{{ $Level }}</span>
+        </div>
+        <div class="background">
+            Background: <span class="attribute-preview">{{ $Background }}</span>
+        </div>
+        <div class="player">
+            Player: <span class="attribute-preview">{{ $Player_Name }}</span>
+        </div>
+        <div class="Species">
+            Species : <span class="attribute-preview">{{ $Species }}</span>
+        </div>
+        <div class="Homeworld">
+            Homeworld: <span class="attribute-preview">{{ $Homeworld }}</span>
+        </div>
+        <div class="skill_points">
+            Skill Points: <span class="attribute-preview">{{ $Skill_Points}}</span>
+        </div>
+    </div>
+
+    <div class="abilities">
+        <div class="ability str">
+            <div class="abTitle">
+                Strength
+            </div>
+            <div class="score">
+                <span class="attribute-preview">{{ $Strength }}</span> (<span class="attribute-preview">{{ $_strmod }}</span>)
+            </div>
+        </div>
+        <div class="ability dex">
+            <div class="abTitle">
+                Dexterity
+            </div>
+            <div class="score">
+                <span class="attribute-preview">{{ $Dexterity }}</span> (<span class="attribute-preview">{{ $_dexmod }}</span>)
+            </div>
+        </div>
+        <div class="ability con">
+            <div class="abTitle">
+                Constitution
+            </div>
+            <div class="score">
+                <span class="attribute-preview">{{ $Constitution }}</span> (<span class="attribute-preview">{{ $_conmod }}</span>)
+            </div>
+        </div>
+        <div class="ability int">
+            <div class="abTitle">
+                Intelligence
+            </div>
+            <div class="score">
+                <span class="attribute-preview">{{ $Intelligence }}</span> (<span class="attribute-preview">{{ $_intmod }}</span>)
+            </div>
+        </div>
+        <div class="ability wis">
+            <div class="abTitle">
+                Wisdom
+            </div>
+            <div class="score">
+                <span class="attribute-preview">{{ $Wisdom }}</span> (<span class="attribute-preview">{{ $_wismod }}</span>)
+            </div>
+        </div>
+        <div class="ability cha">
+            <div class="abTitle">
+                Charisma
+            </div>
+            <div class="score">
+                <span class="attribute-preview">{{ $Charisma }}</span> (<span class="attribute-preview">{{ $_chamod}}</span>)
+            </div>
+        </div>
+
+    </div>
+
+    <div class="saves">
+        <ul class="saveList">
+            <li>Physical Save: <span class="attribute-preview">{{ $Physical_Save }}</span></li>
+            <li>Evasion Save: <span class="attribute-preview">{{ $Evasion_Save }}</span></li>
+            <li>Mental Save: <span class="attribute-preview">{{ $Mental_Save }}</span></li>
+        </ul>
+    </div>
+
+    <div class="skills">
+        <ul class="skillList">
+            <li><span class="attribute-preview">{{ $_Administer }}</span> Administer</li>
+            <li><span class="attribute-preview">{{ $_Connect }}</span> Connect</li>
+            <li><span class="attribute-preview">{{ $_Exert }}</span> Exert</li>
+            <li><span class="attribute-preview">{{ $_Fix }}</span> Fix</li>
+            <li><span class="attribute-preview">{{ $_Heal }}</span> Heal</li>
+            <li><span class="attribute-preview">{{ $_Know }}</span> Know</li>
+            <li><span class="attribute-preview">{{ $_Lead }}</span> Lead</li>
+            <li><span class="attribute-preview">{{ $_Notice }}</span> Notice</li>
+            <li><span class="attribute-preview">{{ $_Perform }}</span> Perform</li>
+            <li><span class="attribute-preview">{{ $_Pilot }}</span> Pilot</li>
+            <li><span class="attribute-preview">{{ $_Program }}</span> Program</li>
+            <li><span class="attribute-preview">{{ $_Punch }}</span> Punch</li>
+            <li><span class="attribute-preview">{{ $_Shoot }}</span> Shoot</li>
+            <li><span class="attribute-preview">{{ $_Sneak }}</span> Sneak</li>
+            <li><span class="attribute-preview">{{ $_Stab }}</span> Stab</li>
+            <li><span class="attribute-preview">{{ $_Survive }}</span> Survive</li>
+            <li><span class="attribute-preview">{{ $_Talk }}</span> Talk</li>
+            <li><span class="attribute-preview">{{ $_Trade }}</span> Trade</li>
+            <li><span class="attribute-preview">{{ $_Work }}</span> Work</li>
+        </ul>
+    </div>
+        <div class="resources">
+            <div class="psionic_skills">
+                <ul>
+                    <li>Biopsionics: <span class="attribute-preview">{{ $_Biopsionics }}</span></li>
+                    <li>Metapsionics: <span class="attribute-preview">{{ $_Metapsionics }}</span></li>
+                    <li>Precognition: <span class="attribute-preview">{{ $_Precognition }}</span></li>
+                    <li>Telekinesis<span class="attribute-preview">{{ $_Telekinesis }}</span></li>
+                    <li>Telepathy<span class="attribute-preview">{{ $_Telepathy }}</span></li>
+                    <li>Teleportation: <span class="attribute-preview">{{ $_Teleportation }}</span></li>
+                </ul>
+            </div>
+            <div class="psionic_effort">
+                <div class="psy_title">
+                    Max Psionic Effort: <span class="attribute-preview">{{ $Max_Psionic_Effort }}</span>
+                </div>
+                <div class="psy_score">
+                    Unavailable Effort: <span class="attribute-preview">{!! $Psionic_Effort !!}</span>
+                </div>
+            </div>
+        
+        </div>
+    <div class="combat">
+        <ul>
+            <li>Health: <span class="attribute-preview">{{ $Health }} / <span class="attribute-preview"> {{ $Max_Health }}</span></li>
+            <li>Condition: <span class="attribute-preview">{{ $Condition }}</span></li>
+            <li>Base Attack Bonus: <span class="attribute-preview">{{ $Attack_Bonus}}</span></li>
+            <li>System Strain: <span class="attribute-preview"> {{ $SystemStrain }}</span></li>
+        </ul>
+    </div>
+
+    <span class="attribute-preview">{!! $Weapons !!}</span>
+    <div class="weapons">
+        <h4>Weapons</h4>
+        <span class="attribute-preview">{!! $Weapons !!}</span>
+    </div>
+    
+
+    <span class="attribute-preview">{!! $Foci !!}</span>
+    <div class="foci">
+        <h4>Foci</h4>
+        <span class="attribute-preview">{!! $Foci !!}</span>
+    </div>
+    
+
+    <span class="attribute-preview">{!! $Cyber !!}</span>
+    <div class="cyber">
+        <h4>Cyberware</h4>
+        <span class="attribute-preview">{!! $Cyber !!}</span>
+    </div>
+    
+
+    <span class="attribute-preview">{!! $Psionic_Abilities !!}</span>
+    <div class="psionic_abilities">
+        <h4>Psionic Abilities</h4>
+        <span class="attribute-preview">{!! $Psionic_Abilities !!}</span>
+    </div>
+    
+
+</div>
+<!--
+Attributes needed:
+ $Character_Name
+ $Class
+ $Level
+ $Background
+ $Player_Name
+ $Species
+ $Homeworld
+ $SkillPoints
+ $Strength
+ $Dexterity
+ $Constitution
+ $Intelligence
+ $Wisdom
+ $Charisma
+ $Physical_Save
+ $Evasion_Save
+ $Mental_Save
+ $_Administer
+ $_Connect
+ $_Exert
+ $_Fix
+ $_Heal
+ $_Know
+ $_Lead
+ $_Notice
+ $_Perform
+ $_Pilot
+ $_Program
+ $_Punch
+ $_Shoot
+ $_Sneak
+ $_Stab
+ $_Survive
+ $_Talk
+ $_Trade
+ $_Work
+ $_Biopsionics
+ $_Metapsionics
+ $_Precognition
+ $_Telekinesis
+ $_Telepathy
+ $_Teleportation
+ $Max_Psionic_Effort
+!! $Psionic_Effort
+ $Health
+ $Max_Health
+ $Condition
+ $Attack_Bonus
+ $SystemStrain
+!! $Weapons
+!! $Weapons
+!! $Foci
+!! $Foci
+!! $Cyber
+!! $Cyber
+!! $Psionic_Abilities
+!! $Psionic_Abilities
+_strmod
+_dexmod
+_conmod
+_intmod
+_wismod
+_chamod
+
+-->
