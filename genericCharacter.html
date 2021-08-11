@@ -2,176 +2,188 @@
     <link rel="stylesheet" href="GenericCharacter.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<div class="genericCharacter">
+<body class="swn-root">
 
-    <div class="char-name">
-        <h3><span class="attribute-preview">{{ $Character_Name }}</span></h3>
-    </div>
+<div class="h1">
+    {{ $Character_Name }}
+</div>
 
-    <div class="header">
-        <div class="class">
-            Class &amp; Level: <span class="attribute-preview">{{ $Class }}</span> <span
-                class="attribute-preview">{{ $Level }}</span>
+<div class="grid">
+    <div class="header ">
+        <div class="class attribute">
+            <span class="attribute-name">Class &amp; Level</span>
+            <span class="attribute-value">Level {{ $Level }} {{ $Class }}</span>
         </div>
-        <div class="background">
-            Background: <span class="attribute-preview">{{ $Background }}</span>
+        <div class="background attribute">
+            <span class="attribute-name">Background</span>
+            <span class="attribute-value">{{ $Background }}</span>
         </div>
-        <div class="player">
-            Player: <span class="attribute-preview">{{ $Player_Name }}</span>
+        <div class="player attribute">
+            <span class="attribute-name">Player</span>
+            <span class="attribute-value">{{ $Player_Name }}</span>
         </div>
-        <div class="Species">
-            Species : <span class="attribute-preview">{{ $Species }}</span>
+        <div class="Species attribute">
+            <span class="attribute-name">Species</span>
+            <span class="attribute-value">{{ $Species }}</span>
         </div>
-        <div class="Homeworld">
-            Homeworld: <span class="attribute-preview">{{ $Homeworld }}</span>
+        <div class="Homeworld attribute">
+            <span class="attribute-name">Homeworld</span>
+            <span class="attribute-value">{{ $Homeworld }}</span>
         </div>
-        <div class="skill_points">
-            Skill Points: <span class="attribute-preview">{{ $Skill_Points}}</span>
+        <div class="skill_points attribute">
+            <span class="attribute-name">Skill Points</span>
+            <span class="attribute-value">{{ $Skill_Points}}</span>
         </div>
     </div>
 
     <div class="abilities">
-        <div class="ability str">
-            <div class="abTitle">
+        <div class="h2">ABILITIES</div>
+        <div class="attribute">
+            <span class="attribute-name">
                 Strength
-            </div>
-            <div class="score">
-                <span class="attribute-preview">{{ $Strength }}</span> (<span class="attribute-preview">{{ $_strmod }}</span>)
-            </div>
+            </span>
+            <span class="attribute-value">
+                {{ $Strength }} ({{ $_strmod }})
+            </span>
         </div>
-        <div class="ability dex">
-            <div class="abTitle">
+        <div class="attribute">
+            <div class="attribute-name">
                 Dexterity
             </div>
-            <div class="score">
-                <span class="attribute-preview">{{ $Dexterity }}</span> (<span class="attribute-preview">{{ $_dexmod }}</span>)
+            <div class="attribute-value">
+                {{ $Dexterity }} ({{ $_dexmod }})
             </div>
         </div>
-        <div class="ability con">
-            <div class="abTitle">
+        <div class="attribute">
+            <div class="attribute-name">
                 Constitution
             </div>
-            <div class="score">
-                <span class="attribute-preview">{{ $Constitution }}</span> (<span class="attribute-preview">{{ $_conmod }}</span>)
+            <div class="attribute-value">
+                {{ $Constitution }} ({{ $_conmod }})
             </div>
         </div>
-        <div class="ability int">
-            <div class="abTitle">
+        <div class="attribute">
+            <div class="attribute-name">
                 Intelligence
             </div>
-            <div class="score">
-                <span class="attribute-preview">{{ $Intelligence }}</span> (<span class="attribute-preview">{{ $_intmod }}</span>)
+            <div class="attribute-value">
+                {{ $Intelligence }} ({{ $_intmod }})
             </div>
         </div>
-        <div class="ability wis">
-            <div class="abTitle">
+        <div class="attribute">
+            <div class="attribute-name">
                 Wisdom
             </div>
-            <div class="score">
-                <span class="attribute-preview">{{ $Wisdom }}</span> (<span class="attribute-preview">{{ $_wismod }}</span>)
+            <div class="attribute-value">
+                {{ $Wisdom }} ({{ $_wismod }})
             </div>
         </div>
-        <div class="ability cha">
-            <div class="abTitle">
+        <div class="attribute">
+            <div class="attribute-name">
                 Charisma
             </div>
-            <div class="score">
-                <span class="attribute-preview">{{ $Charisma }}</span> (<span class="attribute-preview">{{ $_chamod}}</span>)
+            <div class="attribute-value">
+                {{ $Charisma }} ({{ $_chamod}})
             </div>
         </div>
 
     </div>
 
     <div class="saves">
+        <div class="h2">SAVES</div>
         <ul class="saveList">
-            <li>Physical Save: <span class="attribute-preview">{{ $Physical_Save }}</span></li>
-            <li>Evasion Save: <span class="attribute-preview">{{ $Evasion_Save }}</span></li>
-            <li>Mental Save: <span class="attribute-preview">{{ $Mental_Save }}</span></li>
+            <li>Physical Save: {{ $Physical_Save }}</li>
+            <li>Evasion Save: {{ $Evasion_Save }}</li>
+            <li>Mental Save: {{ $Mental_Save }}</li>
         </ul>
     </div>
 
     <div class="skills">
+        <div class="h2">SKILLS</div>
         <ul class="skillList">
-            <li><span class="attribute-preview">{{ $_Administer }}</span> Administer</li>
-            <li><span class="attribute-preview">{{ $_Connect }}</span> Connect</li>
-            <li><span class="attribute-preview">{{ $_Exert }}</span> Exert</li>
-            <li><span class="attribute-preview">{{ $_Fix }}</span> Fix</li>
-            <li><span class="attribute-preview">{{ $_Heal }}</span> Heal</li>
-            <li><span class="attribute-preview">{{ $_Know }}</span> Know</li>
-            <li><span class="attribute-preview">{{ $_Lead }}</span> Lead</li>
-            <li><span class="attribute-preview">{{ $_Notice }}</span> Notice</li>
-            <li><span class="attribute-preview">{{ $_Perform }}</span> Perform</li>
-            <li><span class="attribute-preview">{{ $_Pilot }}</span> Pilot</li>
-            <li><span class="attribute-preview">{{ $_Program }}</span> Program</li>
-            <li><span class="attribute-preview">{{ $_Punch }}</span> Punch</li>
-            <li><span class="attribute-preview">{{ $_Shoot }}</span> Shoot</li>
-            <li><span class="attribute-preview">{{ $_Sneak }}</span> Sneak</li>
-            <li><span class="attribute-preview">{{ $_Stab }}</span> Stab</li>
-            <li><span class="attribute-preview">{{ $_Survive }}</span> Survive</li>
-            <li><span class="attribute-preview">{{ $_Talk }}</span> Talk</li>
-            <li><span class="attribute-preview">{{ $_Trade }}</span> Trade</li>
-            <li><span class="attribute-preview">{{ $_Work }}</span> Work</li>
+            <li>{{ $_Administer }} Administer</li>
+            <li>{{ $_Connect }} Connect</li>
+            <li>{{ $_Exert }} Exert</li>
+            <li>{{ $_Fix }} Fix</li>
+            <li>{{ $_Heal }} Heal</li>
+            <li>{{ $_Know }} Know</li>
+            <li>{{ $_Lead }} Lead</li>
+            <li>{{ $_Notice }} Notice</li>
+            <li>{{ $_Perform }} Perform</li>
+            <li>{{ $_Pilot }} Pilot</li>
+            <li>{{ $_Program }} Program</li>
+            <li>{{ $_Punch }} Punch</li>
+            <li>{{ $_Shoot }} Shoot</li>
+            <li>{{ $_Sneak }} Sneak</li>
+            <li>{{ $_Stab }} Stab</li>
+            <li>{{ $_Survive }} Survive</li>
+            <li>{{ $_Talk }} Talk</li>
+            <li>{{ $_Trade }} Trade</li>
+            <li>{{ $_Work }} Work</li>
         </ul>
     </div>
-        <div class="resources">
-            <div class="psionic_skills">
-                <ul>
-                    <li>Biopsionics: <span class="attribute-preview">{{ $_Biopsionics }}</span></li>
-                    <li>Metapsionics: <span class="attribute-preview">{{ $_Metapsionics }}</span></li>
-                    <li>Precognition: <span class="attribute-preview">{{ $_Precognition }}</span></li>
-                    <li>Telekinesis<span class="attribute-preview">{{ $_Telekinesis }}</span></li>
-                    <li>Telepathy<span class="attribute-preview">{{ $_Telepathy }}</span></li>
-                    <li>Teleportation: <span class="attribute-preview">{{ $_Teleportation }}</span></li>
-                </ul>
-            </div>
-            <div class="psionic_effort">
-                <div class="psy_title">
-                    Max Psionic Effort: <span class="attribute-preview">{{ $Max_Psionic_Effort }}</span>
-                </div>
-                <div class="psy_score">
-                    Unavailable Effort: <span class="attribute-preview">{!! $Psionic_Effort !!}</span>
-                </div>
-            </div>
-        
+
+    <div class="resources">
+        <div class="h2">RESOURCES</div>
+        <div class="psionic_skills">
+            <ul>
+                <li>Biopsionics: {{ $_Biopsionics }}</li>
+                <li>Metapsionics: {{ $_Metapsionics }}</li>
+                <li>Precognition: {{ $_Precognition }}</li>
+                <li>Telekinesis{{ $_Telekinesis }}</li>
+                <li>Telepathy{{ $_Telepathy }}</li>
+                <li>Teleportation: {{ $_Teleportation }}</li>
+            </ul>
         </div>
+        <div class="psionic_effort">
+            <div class="psy_title">
+                Max Psionic Effort: {{ $Max_Psionic_Effort }}
+            </div>
+            <div class="psy_score">
+                Unavailable Effort: {!! $Psionic_Effort !!}
+            </div>
+        </div>
+
+    </div>
+
     <div class="combat">
+        <div class="h2">COMBAT</div>
         <ul>
-            <li>Health: <span class="attribute-preview">{{ $Health }} / <span class="attribute-preview"> {{ $Max_Health }}</span></li>
-            <li>Condition: <span class="attribute-preview">{{ $Condition }}</span></li>
-            <li>Base Attack Bonus: <span class="attribute-preview">{{ $Attack_Bonus}}</span></li>
-            <li>System Strain: <span class="attribute-preview"> {{ $SystemStrain }}</span></li>
+            <li>Health: {{ $Health }} / <span class="attribute-preview"> {{ $Max_Health }}</span></li>
+            <li>Condition: {{ $Condition }}</li>
+            <li>Base Attack Bonus: {{ $Attack_Bonus}}</li>
+            <li>System Strain:  {{ $SystemStrain }}</li>
         </ul>
     </div>
-
-    <span class="attribute-preview">{!! $Weapons !!}</span>
-    <div class="weapons">
-        <h4>Weapons</h4>
-        <span class="attribute-preview">{!! $Weapons !!}</span>
-    </div>
-    
-
-    <span class="attribute-preview">{!! $Foci !!}</span>
-    <div class="foci">
-        <h4>Foci</h4>
-        <span class="attribute-preview">{!! $Foci !!}</span>
-    </div>
-    
-
-    <span class="attribute-preview">{!! $Cyber !!}</span>
-    <div class="cyber">
-        <h4>Cyberware</h4>
-        <span class="attribute-preview">{!! $Cyber !!}</span>
-    </div>
-    
-
-    <span class="attribute-preview">{!! $Psionic_Abilities !!}</span>
-    <div class="psionic_abilities">
-        <h4>Psionic Abilities</h4>
-        <span class="attribute-preview">{!! $Psionic_Abilities !!}</span>
-    </div>
-    
-
 </div>
+
+<div class="flex-data">
+    <article class="weapons">
+        <div class="h2">WEAPONS</div>
+        <p class="data">{!! $Weapons !!}</p>
+    </article>
+
+    <article class="foci">
+        <div class="h2">FOCI</div>
+        <p class="data">{!! $Foci !!}</p>
+    </article>
+</div>
+
+<div class="flex-data">
+    <article class="cyber">
+        <div class="h2">CYBERWARE</div>
+        <p class="data">{!! $Cyber !!}</p>
+    </article>
+
+    <article class="psionic_abilities">
+        <div class="h2">PSIONIC ABILITIES</div>
+        <p class="data">{!! $Psionic_Abilities !!}</p>
+    </article>
+</div>
+
+<footer>STARS WITHOUT NUMBER</footer>
+
+</body>
 <!--
 Attributes needed:
  $Character_Name
