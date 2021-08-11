@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+.idea/
+*.iml
 .vscode/settings.json
 HexSheet.css
 HexSheet.html
-=======
-.idea/
-*.iml
->>>>>>> c5d3cd2c8545bc276869a6ebe852eb19c329d41a
