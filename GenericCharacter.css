@@ -30,7 +30,6 @@
   background-size: cover;
 
   padding: 20px;
-  /*height: calc(100% - 40px);*/
 
   font-family: Aftetir, sans-serif;
   font-size: 24px;
@@ -38,12 +37,9 @@
   text-shadow: 0 0 4px var(--body-text-color);
 }
 
-.swn-root table {
-  /* Why does table have it's own stock font size... */
-  font-size: 24px;
-  color: var(--body-text-color);
-}
-
+/********************************
+  Header Styles
+ ********************************/
 .swn-root .h1,
 .swn-root .h2,
 .swn-root footer {
@@ -77,6 +73,9 @@
   width: max-content;
 }
 
+/********************************
+  Attribute Styles
+ ********************************/
 .swn-root .attribute-name,
 .swn-root td:nth-child(1) {
   height: 37px;
@@ -116,29 +115,24 @@
   margin-right: 15px;
 }
 
-/******** Start Grid Styles ********/
+.swn-root .header td:nth-child(1) {
+  width: 135px;
+}
+
+/********************************
+  Grid Styles
+ ********************************/
 .swn-root .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
     "header header header"
-    "abilities skills psionic"
+    "abilities skills resources"
     "saves skills combat";
   grid-gap: 10px;
 
   margin-bottom: 15px;
-}
-
-.swn-root .grid ul {
-  display: list-item;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.swn-root .grid .char-name {
-  grid-area: char-name;
 }
 
 .swn-root .grid .header {
@@ -148,70 +142,34 @@
   grid-template-rows: auto;
   grid-template-areas:
     "class bg player"
-    "race homeworld skill_points";
+    "species homeworld skill-points";
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
 
-.swn-root .header td:nth-child(1) {
-  width: 135px;
-}
+.swn-root .grid .abilities {grid-area: abilities;}
+.swn-root .grid .skills {grid-area: skills;}
+.swn-root .grid .resources {grid-area: resources;}
+.swn-root .grid .saves {grid-area: saves;}
+.swn-root .grid .combat {grid-area: combat;}
+.swn-root .grid .class {grid-area: class;}
+.swn-root .grid .background {grid-area: bg;}
+.swn-root .grid .player {grid-area: player;}
+.swn-root .grid .species {grid-area: species}
+.swn-root .grid .homeworld {grid-area: homeworld;}
+.swn-root .grid .skill-points {grid-area: skill-points;}
 
-.swn-root .grid .abilities {
-  grid-area: abilities;
-  /* Is making this list a grid really necessary? */
-  /*display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);*/
-}
-
-.swn-root .grid .skills {
-  grid-area: skills;
-}
-
-.swn-root .grid .psionic {
-  grid-area: psionic;
-}
-
-.swn-root .grid .combat{
-  grid-area: combat;
-}
-
-.swn-root .grid .combat{
-  grid-area: combat;
-}
-
-.swn-root .grid .saves {
-  grid-area: saves;
-}
-
-.swn-root .grid .class {
-  grid-area: class;
-}
-
-.swn-root .grid .background {
-  grid-area: bg;
-}
-
-.swn-root .grid .player {
-  grid-area: player;
-}
-
-.swn-root .grid .race {
-  grid-area: race;
-}
-
-.swn-root .grid .homeworld{
-  grid-area: homeworld;
-}
-
-.swn-root .grid .skill_points {
-  grid-area: skill_points;
-}
-/******** End Grid Styles ********/
-
+/********************************
+  Other
+ ********************************/
 .swn-root .flex {
   display: flex;
+}
+
+.swn-root table {
+  /* Why does table have it's own stock font size... */
+  font-size: 24px;
+  color: var(--body-text-color);
 }
 
 .swn-root article {
@@ -224,16 +182,33 @@
   color: var(--header-text-color);
 }
 
-@media (max-width: 450px) {
-  .swn-root {
-    grid-template-columns: 1fr;
+/********************************
+  Mobile/Narrow Styles
+ ********************************/
+@media screen and (max-width: 1300px) {
+  .swn-root .grid {
+    grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
-      "char-name"
       "header"
       "abilities"
       "saves"
-      "psionic"
-      "combat"
-      "skills";
+      "skills"
+      "resources"
+      "combat";
+  }
+
+  .swn-root .grid .header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "class"
+      "species"
+      "bg"
+      "homeworld"
+      "player"
+      "skill-points";
+  }
+
+  .swn-root .flex {
+    display: block;
   }
 }
