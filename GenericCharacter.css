@@ -42,7 +42,7 @@
  ********************************/
 .swn-root .h1,
 .swn-root .h2,
-.swn-root footer {
+.swn-root [footer] {
   font-family: Researcher, sans-serif;
   font-weight: bold;
   letter-spacing: 3px;
@@ -68,7 +68,7 @@
 }
 
 .swn-root .h2,
-.swn-root footer {
+.swn-root [footer] {
   font-size: 24px;
   width: max-content;
 }
@@ -113,10 +113,11 @@
 .swn-root .multiline-value {
   margin-left: 2px;
   margin-right: 15px;
+  color: var(--body-text-color);
 }
 
 .swn-root .header td:nth-child(1) {
-  width: 135px;
+  width: 140px;
 }
 
 /********************************
@@ -168,16 +169,17 @@
 
 .swn-root table {
   /* Why does table have it's own stock font size... */
+  width: 100%;
   font-size: 24px;
   color: var(--body-text-color);
 }
 
-.swn-root article {
+.swn-root [article] {
   flex-grow: 1;
   width: 50%;
 }
 
-.swn-root footer {
+.swn-root [footer] {
   font-family: Researcher, sans-serif;
   color: var(--header-text-color);
 }
@@ -210,5 +212,10 @@
 
   .swn-root .flex {
     display: block;
+  }
+
+  .swn-root [article] {
+    flex-grow: unset;
+    width: 100%;
   }
 }
